@@ -49,4 +49,13 @@ pipeline {
             junit '**/target/surefire-reports/*.xml'
         }
     }
+
+
+
+stage('Webhook') {
+            steps {
+checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'bb303822-e695-4214-9247-762e064eae7f', url: 'https://github.com/mertilm/calculator.git']])
+}
+        }
+
 }
