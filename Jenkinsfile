@@ -10,7 +10,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Cloner le repository depuis GitHub
-                git branch: 'main', url: 'https://github.com/mertilm/calculator.git'
+                git branch: 'master', url: 'https://github.com/mertilm/calculator.git'
             }
         }
 
